@@ -46,7 +46,7 @@ body {
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
-    /* background: #4d21fc; */
+    /* background: #5634de; */
     color: #828282;
     font-family: Roboto, sans-serif;
     padding: 0;
@@ -514,7 +514,7 @@ a.text-black-hover:hover {
 .btn-link.text-extra-dark-gray,
 .text-extra-dark-gray,
 a.text-extra-dark-gray-hover:hover {
-    color: #5634de
+    color: #333333
 }
 
 .btn-link.text-dark-gray,
@@ -712,19 +712,19 @@ a.text-blue-wood-hover:hover {
 .btn-link.text-purple,
 .text-purple,
 a.text-purple-hover:hover {
-    color: #502e95
+    color: #5634de
 }
 
 .btn-link.text-medium-purple,
 .text-medium-purple,
 a.text-medium-purple-hover:hover {
-    color: #3a285e
+    color: #5634de
 }
 
 .btn-link.text-dark-purple,
 .text-dark-purple,
 a.text-dark-purple-hover:hover {
-    color: #333045
+    color: #4d21fc
 }
 
 .btn-link.text-very-light-desert-storm,
@@ -1655,7 +1655,7 @@ a.text-gradient-fuego-turquoise-hover:hover {
 }
 
 .bg-purple {
-    background-color: #502e95
+    background-color: #5634de
 }
 
 .bg-medium-purple {
@@ -1663,7 +1663,7 @@ a.text-gradient-fuego-turquoise-hover:hover {
 }
 
 .bg-dark-purple {
-    background-color: #333045
+    background-color: #4d21fc
 }
 
 .bg-dark-purple-2 {
@@ -3519,15 +3519,15 @@ input.btn:focus {
 }
 
 .btn.btn-dark-purple {
-    background: #333045;
-    border-color: #333045;
+    background: #4d21fc;
+    border-color: #4d21fc;
     color: #fff
 }
 
 .btn.btn-dark-purple:focus,
 .btn.btn-dark-purple:hover {
     background: 0 0;
-    color: #333045
+    color: #4d21fc
 }
 
 .btn.btn-slate-blue {

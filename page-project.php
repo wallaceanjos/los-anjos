@@ -13,7 +13,6 @@ Template Name: Projeto
 if ( have_posts() ) :
     while ( have_posts() ) : the_post();
         // O código para exibir cada projeto
-        // Exibir o título do projeto
         the_content(); // Exibir o conteúdo do projeto
     endwhile;
 endif;
@@ -43,7 +42,7 @@ endif;
                 <div class="col-12 col-6 text-center">
                     <img src="<?php echo esc_url($page_02_img2); ?>" alt="" class="w-25">
                     <h5 class="alt-font text-white margin-5-rem-top margin-9-rem-bottom font-weight-600 text-uppercase d-block xs-margin-3-rem-top xs-margin-5-rem-bottom"><?php echo the_title();?></h5>
-                    <span class="separator-line-vertical w-100px h-1px d-inline-block align-middle bg-dark-orange xs-w-60px"></span>
+                    <span class="separator-line-vertical w-100px h-1px d-inline-block align-middle bg-dark-purple xs-w-60px"></span>
                 </div>
             </div>
         </div>
@@ -87,7 +86,7 @@ endif;
                                 </div>
                                 <div class="col-12 col-md-3 col-sm-6 text-center wow animate__fadeIn" data-wow-delay="0.6s">
                                     <span class="d-block d-lg-inline-block md-margin-10px-bottom">website:</span>
-                                    <a class="text-extra-dark-gray text-dark-orange-hover" href="https://www.themezaa.com/" target="_blank">www.themezaa.com</a>
+                                    <a class="text-extra-dark-gray text-dark-purple-hover" href="https://www.themezaa.com/" target="_blank">www.themezaa.com</a>
                                 </div>  
                             </div>
                         </div>
@@ -115,13 +114,13 @@ endif;
                     <h6 class="alt-font text-extra-dark-gray font-weight-500 m-0">Running allows me to set my mind free. Nothing seems impossible.</h6>
                 </div>
                 <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin sm-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
-                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-orange margin-20px-right"></span><div class="flex-grow-1">The Challenge</div></div>
+                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Challenge</div></div>
                     <p class="md-w-80 xs-w-100">
                         <?php echo $this_content; ?>
                     </p>
                 </div>
                 <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin wow animate__fadeIn" data-wow-delay="0.6s">
-                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-orange margin-20px-right"></span><div class="flex-grow-1">The Approach</div></div>
+                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Approach</div></div>
                     <p class="md-w-80 xs-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been.</p>
                 </div>
             </div>
@@ -158,9 +157,9 @@ endif;
                     <a href="https://www.youtube.com/watch?v=g0f_BRYJLJE" class="popup-youtube video-icon-box video-icon-large absolute-middle-center">
                         <span>
                             <span class="video-icon bg-white">
-                                <i class="icon-simple-line-control-play text-dark-orange"></i>
+                                <i class="icon-simple-line-control-play text-dark-purple"></i>
                                 <span class="video-icon-sonar">
-                                    <span class="video-icon-sonar-bfr bg-dark-orange opacity-8"></span>
+                                    <span class="video-icon-sonar-bfr bg-dark-purple opacity-8"></span>
                                 </span>
                             </span>
                         </span>
@@ -168,7 +167,7 @@ endif;
                 </div>
                 <!-- start blockquote item -->
                 <div class="col-12 col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center wow animate__fadeIn">
-                    <i class="ti-quote-left text-dark-orange icon-large margin-25px-bottom d-block"></i>
+                    <i class="ti-quote-left text-dark-purple icon-large margin-25px-bottom d-block"></i>
                     <span class="text-extra-large text-extra-dark-gray line-height-34px alt-font d-block margin-25px-bottom">A shoe that is too large is apt to trip one and when too small to pinch the feet so it is with those whose fortune does not suit them.</span>
                     <span class="alt-font text-uppercase text-small font-weight-500 letter-spacing-4px">James nichols</span>
                 </div>
@@ -196,7 +195,7 @@ endif;
                 <div class="col-12 col-lg-7 col-md-10 d-flex justify-content-end lg-padding-40px-left md-margin-50px-bottom">
                     <figure class="position-relative m-0">
                         <img src="<?php echo esc_url($page_02_img16); ?>">
-                        <figcaption class="position-absolute bg-dark-orange bottom-minus-20px left-minus-50px text-white padding-3-half-rem-all w-50 xs-w-100 xs-left-minus-25px">
+                        <figcaption class="position-absolute bg-dark-purple bottom-minus-20px left-minus-50px text-white padding-3-half-rem-all w-50 xs-w-100 xs-left-minus-25px">
                             <span class="text-uppercase text-small letter-spacing-1px text-extra-dark-gray alt-font font-weight-500 margin-10px-bottom d-inline-block">Different design</span>
                             <h6 class="alt-font text-uppercase font-weight-500 mb-0">Branding strategy and innovation</h6>
                         </figcaption>
