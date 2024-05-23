@@ -43,52 +43,43 @@
 <?php
     $section_1_string_1 = get_post_meta(get_the_ID(), 'section_1_string_1', true);
     $section_1_string_2 = get_post_meta(get_the_ID(), 'section_1_string_2', true);
-    $section_2_string_1 = get_post_meta(get_the_ID(), 'section_2_string_1', true);
-    $section_2_string_2 = get_post_meta(get_the_ID(), 'section_2_string_2', true);
-    $section_2_string_3 = get_post_meta(get_the_ID(), 'section_2_string_3', true);
-    $section_2_string_4 = get_post_meta(get_the_ID(), 'section_2_string_4', true);
-    $section_2_string_5 = get_post_meta(get_the_ID(), 'section_2_string_5', true);
-    $section_2_string_6 = get_post_meta(get_the_ID(), 'section_2_string_6', true);
-    $section_2_string_7 = get_post_meta(get_the_ID(), 'section_2_string_7', true);
-    $section_2_string_8 = get_post_meta(get_the_ID(), 'section_2_string_8', true);
-    $section_2_string_9 = get_post_meta(get_the_ID(), 'section_2_string_9', true);
 ?>
 <!-- Content -->
 
 
 
-<div class="main-content">
-    <style>
-        .mbYTP_wrapper{
-            filter: contrast(1.5) sepia(1) hue-rotate(14deg) saturate(11) brightness(2);
-            mix-blend-mode: screen;
-        }
-    </style>
-    <!-- start section -->
-    <section class="parallax p-0" data-parallax-background-ratio="0.3" style="background-image:url(<?php echo esc_url($home_design_agency_bg_img_01_jpg); ?>);">
-        <div id="homepage" data-background="./assets/images/background-video-bg.jpg" style="min-height:100vh;">
-            <!-- Video BG Init -->
-            <div class="player"
-                data-property="{videoURL:'https://www.youtube.com/watch?v=5_Blq9W9cT8',containment:'#homepage',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1,addRaster:false, quality:'default'}">
-            </div>
-            <div class="with-bg-size" style="position:absolute; top:0px; left:0px; z-index:0; width:100%; margin:auto;">
-                <div class="position-absolute cover-background top-0px left-0px w-100 h-100" data-parallax-background-ratio="0.5" style="background: url(<?php echo esc_url($home_design_agency_bg_img_01_png); ?>)no-repeat center-center/cover;"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-5 col-md-6 col-sm-7 full-screen md-h-650px sm-h-500px d-flex flex-column justify-content-center padding-8-rem-tb" style="backdrop-filter: blur(10px); min-height: 100vh;">
-                            <h1 class="alt-font font-weight-600 title-large text-extra-dark-gray letter-spacing-minus-4px margin-4-half-rem-bottom sm-letter-spacing-minus-1-half xs-w-65"><?php echo $section_1_string_1; ?></h1>
-                            <a href="contact-us-classic.html" class="btn btn-extra-large btn-expand-ltr text-extra-dark-gray btn-rounded align-self-start font-weight-600"><?php echo $section_1_string_2; ?><span class="bg-white"></span></a>
+    <div class="main-content">
+        <style>
+            .mbYTP_wrapper{
+                filter: contrast(1.5) sepia(1) hue-rotate(14deg) saturate(11) brightness(2);
+                mix-blend-mode: screen;
+            }
+        </style>
+        <!-- start section -->
+        <section class="parallax p-0" data-parallax-background-ratio="0.3" style="background-image:url(<?php echo esc_url($home_design_agency_bg_img_01_jpg); ?>);">
+            <div id="homepage" data-background="./assets/images/background-video-bg.jpg" style="min-height:100vh;">
+                <!-- Video BG Init -->
+                <div class="player"
+                    data-property="{videoURL:'https://www.youtube.com/watch?v=5_Blq9W9cT8',containment:'#homepage',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1,addRaster:false, quality:'default'}">
+                </div>
+                <div class="with-bg-size" style="position:absolute; top:0px; left:0px; z-index:0; width:100%; margin:auto;">
+                    <div class="position-absolute cover-background top-0px left-0px w-100 h-100" data-parallax-background-ratio="0.5" style="background: url(<?php echo esc_url($home_design_agency_bg_img_01_png); ?>)no-repeat center-center/cover;"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 col-md-6 col-sm-7 full-screen md-h-650px sm-h-500px d-flex flex-column justify-content-center padding-8-rem-tb" style="backdrop-filter: blur(10px); min-height: 100vh;">
+                                <h1 class="alt-font font-weight-600 title-large text-extra-dark-gray letter-spacing-minus-4px margin-4-half-rem-bottom sm-letter-spacing-minus-1-half xs-w-65">Los Anjos Agency. Design & Web</h1>
+                                <a href="contact-us-classic.html" class="btn btn-extra-large btn-expand-ltr text-extra-dark-gray btn-rounded align-self-start font-weight-600">Comece agora.<span class="bg-white"></span></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="scroll-down-bottom">
+                        <a href="#about" class="section-link d-block w-2px h-35px bg-white mx-auto right-0px left-0px position-absolute">
+                            <span class="scroll-down-text alt-font font-weight-600 text-extra-dark-gray letter-spacing-minus-1-half margin-5px-bottom">scroll</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="scroll-down-bottom">
-                    <a href="#about" class="section-link d-block w-2px h-35px bg-white mx-auto right-0px left-0px position-absolute">
-                        <span class="scroll-down-text alt-font font-weight-600 text-extra-dark-gray letter-spacing-minus-1-half margin-5px-bottom">scroll</span>
-                    </a>
-                </div>
+                <!-- End Video BG Init -->
             </div>
-            <!-- End Video BG Init -->
-        </div>
         </section>
         <!-- end section -->
         <!-- start section -->
@@ -99,7 +90,7 @@
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.1s">
                         <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Vector-5 icon-large padding-20px-bottom"></i>
-                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block"><?php echo $section_2_string_1; ?></span>
+                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block">Bom Design</span>
                         </a>
                     </div>
                     <!-- end feature box item -->
@@ -107,7 +98,7 @@
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
                         <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Police icon-large padding-20px-bottom"></i>
-                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block"><?php echo $section_2_string_2; ?></span>
+                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block">Ideias Inspiradoras</span>
                         </a>
                     </div>
                     <!-- end feature box item -->
@@ -115,7 +106,7 @@
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.3s">
                         <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Bee icon-large padding-20px-bottom"></i>
-                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block"><?php echo $section_2_string_3; ?></span>
+                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block">Inovação</span>
                         </a>
                     </div>
                     <!-- end feature box item -->
@@ -123,7 +114,7 @@
                     <div class="col text-center sm-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
                         <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Medal-2 icon-large padding-20px-bottom"></i>
-                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block"><?php echo $section_2_string_4; ?></span>
+                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block">Melhor Qualidade</span>
                         </a>
                     </div>
                     <!-- end feature box item -->
@@ -131,21 +122,21 @@
                     <div class="col text-center wow animate__fadeIn" data-wow-delay="0.5s">
                         <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Idea-5 icon-large padding-20px-bottom"></i>
-                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block"><?php echo $section_2_string_5; ?></span>
+                            <span class="alt-font font-weight-600 text-extra-dark-gray text-uppercase d-block">Análise de Branding</span>
                         </a>
                     </div>
                     <!-- end feature box item -->
                 </div>
-                <div class="row align-items-end justify-content-center margin-10-half-rem-top md-margin-7-rem-top">
+                <div class="row align-items-center justify-content-center margin-10-half-rem-top md-margin-7-rem-top">
                     <div class="col-12 col-lg-3 pe-lg-0 md-margin-25px-bottom sm-margin-15px-bottom text-center text-lg-start wow animate__fadeIn" data-wow-delay="0.2s">
-                        <span class="alt-font font-weight-600 title-large text-sunglow d-block letter-spacing-minus-5px sm-letter-spacing-minus-1-half"><?php echo $section_2_string_6; ?><span class="text-extra-dark-gray">.</span></span>
+                        <span class="alt-font font-weight-600 title-large text-sunglow d-block letter-spacing-minus-5px sm-letter-spacing-minus-1-half">Falae<span class="text-extra-dark-gray">.</span></span>
                     </div>
                     <div class="col-12 col-lg-5 col-md-10 text-lg-end md-margin-25px-bottom text-center text-lg-start wow animate__fadeIn" data-wow-delay="0.4s">
-                        <h4 class="alt-font font-weight-600 text-extra-dark-gray d-block mb-0 padding-2-half-rem-right letter-spacing-minus-1px lg-no-padding-right"><?php echo $section_2_string_7; ?></h4>
+                        <h4 class="alt-font font-weight-600 text-extra-dark-gray d-block mb-0 padding-2-half-rem-right letter-spacing-minus-1px lg-no-padding-right">Agência especializada em produção de design criativo.</h4>
                     </div>
                     <div class="col-12 col-lg-4 col-md-9 padding-30px-left md-padding-15px-left text-center text-lg-start wow animate__fadeIn" data-wow-delay="0.6s">
-                        <p class="w-80 margin-15px-bottom lg-w-100"><?php echo $section_2_string_8; ?></p>
-                        <a href="about-us.html" class="btn btn-link btn-extra-large text-extra-dark-gray font-weight-600"><?php echo $section_2_string_9; ?></a>
+                        <p class="w-80 margin-15px-bottom lg-w-100">Somos os mestres do design gráfico! Vamos transformar suas ideias em obras-primas visuais.</p>
+                        <a href="about-us.html" class="btn btn-link btn-extra-large text-extra-dark-gray font-weight-600">Agency info</a>
                     </div>
                 </div>
             </div>
@@ -178,14 +169,14 @@
                             <li class="grid-sizer"></li>
                             <!-- start portfolio item -->
                             <li class="grid-item logos branding wow animate__fadeIn">
-                                <a href="single-project-page-01.html">
+                                <a href="<?php echo home_url('/regenere/'); ?>">
                                     <div class="portfolio-box">
                                         <div class="portfolio-image bg-white">
                                             <img src="<?php echo esc_url($home_design_agency_img_04_jpg); ?>" alt="" />
                                             <div class="portfolio-hover bg-white justify-content-center d-flex flex-column">
                                                 <div class="scale">
-                                                    <div class="alt-font text-extra-dark-gray font-weight-600 letter-spacing-minus-1px d-block text-extra-large text-uppercase">Motion</div>
-                                                    <div class="text-uppercase text-medium-gray text-small alt-font d-block">Identity</div>
+                                                    <div class="alt-font text-extra-dark-gray font-weight-600 letter-spacing-minus-1px d-block text-extra-large text-uppercase">Regenere</div>
+                                                    <div class="text-uppercase text-medium-gray text-small alt-font d-block">Design</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -446,14 +437,14 @@
                 <div class="row align-items-center justify-content-center margin-10-rem-top md-margin-7-rem-top">
                     <div class="col-12 col-lg-3 col-md-5 col-sm-6 text-center text-lg-end order-1 md-margin-5-rem-bottom xs-margin-4-rem-bottom wow animate__fadeInRight" data-wow-delay="0.7s">
                         <i class="fas fa-quote-right icon-small d-block opacity-3 margin-25px-bottom"></i>
-                        <span class="alt-font font-weight-500 text-large line-height-30px text-extra-dark-gray d-inline-block w-80">Oferecemos modelos de contratação perfeitos para os requisitos do seu projeto.</span>
+                        <span class="alt-font font-weight-500 text-large line-height-30px text-extra-dark-gray d-inline-block w-80">Olá, meu nome é Wallace e sou diretor da Los Anjos. Nossa missão é executar a sua missão!</span>
                     </div>
                     <div class="col-12 col-lg-6 col-md-8 p-0 order-3 order-lg-2 wow animate__fadeIn">
                         <img src="<?php echo esc_url($home_design_agency_img_02_png); ?>" alt="" />
                     </div>
                     <div class="col-12 col-lg-3 col-md-5 col-sm-6 text-center text-lg-start order-2 order-lg-3 md-margin-5-rem-bottom xs-margin-7-rem-bottom wow animate__fadeInLeft" data-wow-delay="0.7s">
                         <i class="fas fa-quote-left icon-small d-block opacity-3 margin-25px-bottom"></i>
-                        <span class="alt-font font-weight-500 text-large line-height-30px text-extra-dark-gray d-inline-block w-80">Nossos designers altamente qualificados e experientes estão aqui para ajudar.</span>
+                        <span class="alt-font font-weight-500 text-large line-height-30px text-extra-dark-gray d-inline-block w-80">A equipe aqui é diferenciada e nós vamos levar a sua comunicação ao topo!</span>
                     </div>
                 </div>
             </div>
@@ -616,6 +607,128 @@
                     <div class="col-12 col-lg-3 text-center wow animate__fadeIn" data-wow-delay="0.4s">
                         <a href="contact-us-modern.html" class="btn btn-fancy btn-box-shadow btn-medium btn-dark-gray">Start a project</a>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        <section>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
+                    <!-- start feature box item -->
+                    <div class="col md-margin-30px-bottom">
+                        <div class="feature-box padding-1-rem-all">
+                            <div class="feature-box-icon">
+                                <i class="line-icon-Gear-2 icon-medium text-gradient-sky-blue-dark-pink margin-35px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin">
+                                <span class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray">Powerfull customize</span>
+                                <p>Lorem ipsum is simply dummy text of the printing typesetting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end feature box item -->
+                    <!-- start feature box item -->
+                    <div class="col md-margin-30px-bottom">
+                        <div class="feature-box padding-1-rem-all">
+                            <div class="feature-box-icon">
+                                <i class="line-icon-Cursor-Click2 icon-medium text-gradient-sky-blue-dark-pink margin-35px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin">
+                                <span class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray">Custom shortcodes</span>
+                                <p>Lorem ipsum is simply dummy text of the printing typesetting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end feature box item -->
+                    <!-- start feature box item -->
+                    <div class="col xs-margin-30px-bottom">
+                        <div class="feature-box padding-1-rem-all">
+                            <div class="feature-box-icon">
+                                <i class="line-icon-Like-2 icon-medium text-gradient-sky-blue-dark-pink margin-35px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin">
+                                <span class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray">Theme advantages</span>
+                                <p>Lorem ipsum is simply dummy text of the printing typesetting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end feature box item -->
+                    <!-- start feature box item -->
+                    <div class="col">
+                        <div class="feature-box padding-1-rem-all">
+                            <div class="feature-box-icon">
+                                <i class="line-icon-Talk-Man icon-medium text-gradient-sky-blue-dark-pink margin-35px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                            </div>
+                            <div class="feature-box-content last-paragraph-no-margin">
+                                <span class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray">Customer satisfaction</span>
+                                <p>Lorem ipsum is simply dummy text of the printing typesetting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end feature box item -->
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        <section class="bg-light-blue">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-5-rem-bottom wow animate__fadeIn">
+                        <span class="d-inline-block alt-font text-medium text-gradient-sky-blue-dark-pink text-uppercase font-weight-500 margin-20px-bottom sm-margin-15px-bottom">What people are saying</span>
+                        <h5 class="alt-font text-extra-dark-gray font-weight-600 letter-spacing-minus-1px">What our valuable customer are saying about us?</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center"> 
+                    <!-- start testimonial item -->
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-8 md-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
+                        <div class="testimonials testimonials-style-03 last-paragraph-no-margin">
+                            <div class="testimonials-bubble border-radius-5px bg-white box-shadow-medium box-shadow-extra-large-hover padding-3-rem-lr padding-2-rem-tb margin-35px-bottom lg-padding-2-rem-lr">
+                                <p>Lorem ipsum dolor amet consectetur do tempor incididunt labore et dolore magna nostrud exercitation ullamco.</p>
+                            </div>
+                            <div class="author padding-20px-lr">
+                                <img class="rounded-circle w-60px h-60px margin-15px-right" src="images/avtar28.jpg" alt="">
+                                <div class="d-inline-block align-middle">
+                                    <span class="alt-font text-medium font-weight-500 line-height-24px text-extra-dark-gray d-block">Herman Miller</span>
+                                    <span class="d-block text-small">ThemeZaa Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end testimonial item -->
+                    <!-- start testimonial item -->
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-8 md-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
+                        <div class="testimonials testimonials-style-03 last-paragraph-no-margin">
+                            <div class="testimonials-bubble border-radius-5px bg-white box-shadow-medium box-shadow-extra-large-hover padding-3-rem-lr padding-2-rem-tb margin-35px-bottom lg-padding-2-rem-lr">
+                                <p>Lorem ipsum dolor amet consectetur do tempor incididunt labore et dolore magna nostrud exercitation ullamco.</p>
+                            </div>
+                            <div class="author padding-20px-lr">
+                                <img class="rounded-circle w-60px h-60px margin-15px-right" src="images/avtar27.jpg" alt="">
+                                <div class="d-inline-block align-middle">
+                                    <span class="alt-font text-medium font-weight-500 line-height-24px text-extra-dark-gray d-block">Jeremy Girard</span>
+                                    <span class="d-block text-small">Microsoft Corporation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end testimonial item -->
+                    <!-- start testimonial item -->
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-8 wow animate__fadeIn" data-wow-delay="0.6s">
+                        <div class="testimonials testimonials-style-03 last-paragraph-no-margin">
+                            <div class="testimonials-bubble border-radius-5px bg-white box-shadow-medium box-shadow-extra-large-hover padding-3-rem-lr padding-2-rem-tb margin-35px-bottom lg-padding-2-rem-lr">
+                                <p>Lorem ipsum dolor amet consectetur do tempor incididunt labore et dolore magna nostrud exercitation ullamco.</p>
+                            </div>
+                            <div class="author padding-20px-lr">
+                                <img class="rounded-circle w-60px h-60px margin-15px-right" src="images/avtar29.jpg" alt="">
+                                <div class="d-inline-block align-middle">
+                                    <span class="alt-font text-medium font-weight-500 line-height-24px text-extra-dark-gray d-block">Alexander Harvard</span>
+                                    <span class="d-block text-small">ThemeZaa Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end testimonial item -->
                 </div>
             </div>
         </section>

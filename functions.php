@@ -165,6 +165,19 @@ function get_breadcrumb() {
     }
 }
 
+add_theme_support( 'block-templates' );
+
+add_action( 'after_setup_theme', 'theme_custom_templates' );
+
+function theme_custom_templates() {
+    // Adicione suporte a templates personalizados para páginas e posts
+    add_theme_support( 'custom-page-templates', array(
+        'page-project.php' => 'Projeto', // Substitua 'page-project.php' pelo nome do seu template
+    ) );
+    
+    add_post_type_support( 'post', 'custom-page-templates' );
+}
+
 function los_anjos_register_styles(){
     $version = wp_get_theme() -> get('Version');
     wp_enqueue_style('los-anjos-style-theme-vendors', get_template_directory_uri() . "/assets/css/theme-vendors.min.css", array(), $version, 'all');

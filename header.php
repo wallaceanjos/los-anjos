@@ -22,7 +22,7 @@
     <body data-mobile-nav-style="classic">
         <!-- start header -->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent header-light fixed-top navbar-boxed header-reverse-scroll">
+            <nav class="navbar no-sticky navbar-expand-lg navbar-light bg-transparent header-light fixed-top navbar-boxed header-reverse-scroll">
                 <div class="container-fluid nav-header-container">
                     <div class="col-5 col-lg-2 ps-lg-0 me-auto me-lg-0">
                         <a class="navbar-brand" href="index.html">
