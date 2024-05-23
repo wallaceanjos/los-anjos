@@ -58,14 +58,14 @@ endif;
                             <img src="<?php echo esc_url($page_02_img5); ?>" alt="">
                         </div>
                         <div class="col-12 col-lg-6 col-md-8 text-center text-md-start wow animate__fadeIn">
-                            <span class="text-extra-dark-gray letter-spacing-minus-1-half title-extra-small line-height-40px alt-font margin-40px-bottom font-weight-500 sm-margin-30px-bottom d-inline-block">Gents club is a eCommerce brand based on London. One of our latest projects.</span>
+                            <span class="text-purple letter-spacing-minus-1-half title-extra-small line-height-40px alt-font margin-40px-bottom font-weight-500 sm-margin-30px-bottom d-inline-block">Gents club is a eCommerce brand based on London. One of our latest projects.</span>
                             <a href="https://www.youtube.com/watch?v=g0f_BRYJLJE" class="popup-youtube video-icon-box video-icon-small position-relative">
                                 <span>
                                     <span class="video-icon bg-extra-dark-gray margin-15px-right">
                                         <i class="icon-simple-line-control-play text-orange"></i>
                                         <span class="video-icon-sonar"></span>
                                     </span>
-                                    <span class="video-icon-text alt-font text-medium text-extra-dark-gray text-uppercase text-decoration-line-bottom d-inline-block font-weight-500 align-middle">Watch a projects</span>
+                                    <span class="video-icon-text alt-font text-medium text-purple text-uppercase text-decoration-line-bottom d-inline-block font-weight-500 align-middle">Watch a projects</span>
                                 </span>
                             </a>
                         </div>
@@ -74,19 +74,19 @@ endif;
                             <div class="row">
                                 <div class="col-12 col-md-3 col-sm-6 text-center border-right border-color-medium-gray sm-margin-30px-bottom xs-border-none wow animate__fadeIn">
                                     <span class="d-block d-lg-inline-block md-margin-10px-bottom">Date:</span>
-                                    <span class="text-extra-dark-gray">08 January 2020</span>
+                                    <span class="text-purple">08 January 2020</span>
                                 </div>
                                 <div class="col-12 col-md-3 col-sm-6 text-center border-right border-color-medium-gray sm-border-none sm-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
                                     <span class="d-block d-lg-inline-block md-margin-10px-bottom">client:</span>
-                                    <span class="text-extra-dark-gray">syrona jarabe de</span>
+                                    <span class="text-purple">syrona jarabe de</span>
                                 </div>
                                 <div class="col-12 col-md-3 col-sm-6 text-center border-right border-color-medium-gray xs-border-none xs-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
                                     <span class="d-block d-lg-inline-block md-margin-10px-bottom">industry:</span>
-                                    <span class="text-extra-dark-gray">fashion shoes</span>
+                                    <span class="text-purple">fashion shoes</span>
                                 </div>
                                 <div class="col-12 col-md-3 col-sm-6 text-center wow animate__fadeIn" data-wow-delay="0.6s">
                                     <span class="d-block d-lg-inline-block md-margin-10px-bottom">website:</span>
-                                    <a class="text-extra-dark-gray text-dark-purple-hover" href="https://www.themezaa.com/" target="_blank">www.themezaa.com</a>
+                                    <a class="text-purple text-dark-purple-hover" href="https://www.themezaa.com/" target="_blank">www.themezaa.com</a>
                                 </div>  
                             </div>
                         </div>
@@ -111,16 +111,16 @@ endif;
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-12 col-lg-4 col-md-7 col-sm-9 md-margin-35px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
-                    <h6 class="alt-font text-extra-dark-gray font-weight-500 m-0">Running allows me to set my mind free. Nothing seems impossible.</h6>
+                    <h6 class="alt-font text-purple font-weight-500 m-0">Running allows me to set my mind free. Nothing seems impossible.</h6>
                 </div>
                 <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin sm-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
-                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Challenge</div></div>
+                    <div class="d-flex alt-font text-purple margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Challenge</div></div>
                     <p class="md-w-80 xs-w-100">
                         <?php echo $this_content; ?>
                     </p>
                 </div>
                 <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin wow animate__fadeIn" data-wow-delay="0.6s">
-                    <div class="d-flex alt-font text-extra-dark-gray margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Approach</div></div>
+                    <div class="d-flex alt-font text-purple margin-15px-bottom font-weight-500"><span class="flex-shrink-0 align-self-center h-1px w-40px bg-dark-purple margin-20px-right"></span><div class="flex-grow-1">The Approach</div></div>
                     <p class="md-w-80 xs-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been.</p>
                 </div>
             </div>
@@ -138,10 +138,10 @@ endif;
                     <img src="<?php echo esc_url($page_02_img7); ?>" alt="">
                 </div>
                 <div class="col-12 col-xl-5 col-md-6 col-sm-11 text-center text-md-start md-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
-                    <span class="alt-font title-extra-small text-extra-dark-gray letter-spacing-minus-1-half line-height-40px font-weight-500 d-inline-block xs-w-95">For men shoes are the most important. Good shoes take you good places</span>
+                    <span class="alt-font title-extra-small text-purple letter-spacing-minus-1-half line-height-40px font-weight-500 d-inline-block xs-w-95">For men shoes are the most important. Good shoes take you good places</span>
                 </div>
                 <div class="col-12 col-lg-4 offset-xl-1 col-md-6 col-sm-10 text-center text-md-start last-paragraph-no-margin wow animate__fadeIn" data-wow-delay="0.6s">
-                    <span class="alt-font text-extra-dark-gray font-weight-500 margin-15px-bottom d-inline-block">Design and style above average</span>
+                    <span class="alt-font text-purple font-weight-500 margin-15px-bottom d-inline-block">Design and style above average</span>
                     <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
@@ -168,7 +168,7 @@ endif;
                 <!-- start blockquote item -->
                 <div class="col-12 col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center wow animate__fadeIn">
                     <i class="ti-quote-left text-dark-purple icon-large margin-25px-bottom d-block"></i>
-                    <span class="text-extra-large text-extra-dark-gray line-height-34px alt-font d-block margin-25px-bottom">A shoe that is too large is apt to trip one and when too small to pinch the feet so it is with those whose fortune does not suit them.</span>
+                    <span class="text-extra-large text-purple line-height-34px alt-font d-block margin-25px-bottom">A shoe that is too large is apt to trip one and when too small to pinch the feet so it is with those whose fortune does not suit them.</span>
                     <span class="alt-font text-uppercase text-small font-weight-500 letter-spacing-4px">James nichols</span>
                 </div>
                 <!-- end blockquote item -->
@@ -196,15 +196,15 @@ endif;
                     <figure class="position-relative m-0">
                         <img src="<?php echo esc_url($page_02_img16); ?>">
                         <figcaption class="position-absolute bg-dark-purple bottom-minus-20px left-minus-50px text-white padding-3-half-rem-all w-50 xs-w-100 xs-left-minus-25px">
-                            <span class="text-uppercase text-small letter-spacing-1px text-extra-dark-gray alt-font font-weight-500 margin-10px-bottom d-inline-block">Different design</span>
-                            <h6 class="alt-font text-uppercase font-weight-500 mb-0">Branding strategy and innovation</h6>
+                            <span class="text-uppercase text-small letter-spacing-1px text-purple alt-font font-weight-500 margin-10px-bottom d-inline-block">Different design</span>
+                            <h6 class="alt-font text-uppercase font-weight-500 mb-0">Apenas estratégia de Branding e Inovação</h6>
                         </figcaption>
                     </figure>
                 </div>
                 <div class="col-12 col-xl-4 offset-xl-1 col-lg-5 col-md-9">
-                    <span class="alt-font title-extra-small text-extra-dark-gray line-height-40px letter-spacing-minus-1-half font-weight-500 d-inline-block margin-25px-bottom">We design experiences that make a difference</span>
+                    <span class="alt-font title-extra-small text-purple line-height-40px letter-spacing-minus-1-half font-weight-500 d-inline-block margin-25px-bottom">Designio é ter um propósito específico.</span>
                     <p>When an unknown printer took a galley of scrambled only five centuries, but also electronic typesetting. Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="#" class="btn btn-link btn-extra-large text-extra-dark-gray">Explore Website</a>
+                    <a href="#" class="btn btn-link btn-extra-large text-purple">Explore Website</a>
                 </div>
             </div>
         </div>
@@ -218,8 +218,8 @@ endif;
                 <div class="col fancy-box-item px-0">
                     <a href="single-project-page-02.html" class="d-flex h-100 align-items-center justify-content-center justify-content-lg-between justify-content-sm-start padding-7-rem-lr padding-4-rem-tb xl-padding-3-rem-all xs-padding-2-rem-tb xs-no-padding-lr">
                         <div class="bg-banner-image cover-background" style="background-image: url(<?php echo esc_url($page_01_img24); ?>)"></div>
-                        <div class="light alt-font text-extra-dark-gray font-weight-500 btn-slide-icon-left text-uppercase me-lg-auto"><i class="line-icon-Arrow-OutLeft icon-medium align-middle margin-20px-right"></i><span class="d-none d-lg-inline-block text-small">Prev project</span></div>
-                        <span class="light text-extra-large alt-font text-extra-dark-gray d-block font-weight-500">Model photography</span>
+                        <div class="light alt-font text-purple font-weight-500 btn-slide-icon-left text-uppercase me-lg-auto"><i class="line-icon-Arrow-OutLeft icon-medium align-middle margin-20px-right"></i><span class="d-none d-lg-inline-block text-small">Prev project</span></div>
+                        <span class="light text-extra-large alt-font text-purple d-block font-weight-500">Model photography</span>
                     </a>
                 </div>
                 <!-- end prev pagination -->
@@ -227,8 +227,8 @@ endif;
                 <div class="col fancy-box-item px-0">
                     <a href="single-project-page-04.html" class="d-flex h-100 align-items-center justify-content-center justify-content-sm-end justify-content-lg-between padding-7-rem-lr padding-4-rem-tb xl-padding-3-rem-all xs-padding-2-rem-tb xs-no-padding-lr">
                         <div class="bg-banner-image cover-background" style="background-image: url(<?php echo esc_url($page_01_img23); ?>)"></div>
-                        <span class="light text-extra-large alt-font text-extra-dark-gray d-block font-weight-500 me-lg-auto">Daimler financial</span>
-                        <div class="light alt-font text-extra-dark-gray font-weight-500 btn-slide-icon text-uppercase"><span class="d-none d-lg-inline-block text-small">Next project </span><i class="line-icon-Arrow-OutRight icon-medium align-middle margin-20px-left"></i></div>
+                        <span class="light text-extra-large alt-font text-purple d-block font-weight-500 me-lg-auto">Daimler financial</span>
+                        <div class="light alt-font text-purple font-weight-500 btn-slide-icon text-uppercase"><span class="d-none d-lg-inline-block text-small">Next project </span><i class="line-icon-Arrow-OutRight icon-medium align-middle margin-20px-left"></i></div>
                     </a>
                 </div>
                 <!-- end next pagination -->
