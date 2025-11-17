@@ -1,0 +1,18 @@
+{
+  "name": "los-anjos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purge": "purgecss --css assets/css/style.css --content ./**/*.php ./source/**/*.js ./assets/**/*.js --output assets/css/style.purged.css && purgecss --css assets/css/layout.css --content ./**/*.php ./source/**/*.js ./assets/**/*.js --output assets/css/layout.purged.css && purgecss --css assets/css/responsive.css --content ./**/*.php ./source/**/*.js ./assets/**/*.js --output assets/css/responsive.purged.css && purgecss --css assets/css/theme-vendors.min.css --content ./**/*.php ./source/**/*.js ./assets/**/*.js --output assets/css/theme-vendors.purged.css --safelist wp-.* admin-.* post-.* page-.* custom-.* is-.* has-.* align.* theme-.* search-.* screen-.* widget.* nav-.* menu-.* elementor-.* slick-.* owl-.*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1"
+  }
+}

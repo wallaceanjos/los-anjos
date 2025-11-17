@@ -1,34 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="pt-br">
-    
-<!-- Mirrored from lithohtml.themezaa.com/home-design-agency.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 01:27:32 GMT -->
 <head>
         <title><?php echo get_bloginfo('name') ?></title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="ThemeZaa">
+        <meta name="author" content="Wallace dos Anjos">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-        <meta name="description" content="Litho is a clean and modern design, BootStrap 5 responsive, business and portfolio multipurpose HTML5 template with 37+ ready homepage demos.">
+        <meta name="description" content="Los Anjos é uma agência de marketing digital que oferece serviços de design, desenvolvimento de sites, marketing de conteúdo, otimização de sites para mecanismos de busca (SEO), e muito mais.">
+        <meta name="keywords" content="Los Anjos, agência de marketing digital, design, desenvolvimento de sites, marketing de conteúdo, otimização de sites para mecanismos de busca (SEO)">
+        <meta name="robots" content="index, follow">
+        <!-- og -->
+        <meta property="og:title" content="Los Anjos">
+        <meta property="og:description" content="Los Anjos é uma agência de marketing digital que oferece serviços de design, desenvolvimento de sites, marketing de conteúdo, otimização de sites para mecanismos de busca (SEO), e muito mais.">
+        <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/images/og_los_anjos.jpg">
+        <meta property="og:url" content="<?php echo home_url() ?>">
+        <meta property="og:site_name" content="Los Anjos">
+        <meta property="og:type" content="website">
         <!-- favicon icon -->
         <link rel="shortcut icon" href="images/favicon.png">
         <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
         <!-- style sheets and font icons  -->
+        <link rel="manifest" href="<?php echo get_template_directory_uri() ?>/manifest.json">
         <?php
             wp_head();
         ?>
     </head>
-    <body data-mobile-nav-style="classic">
+    <body data-mobile-nav-style="classic" class="light-theme">
+    <?php
+    $menu_banner_01_jpg = get_template_directory_uri() . '/assets/images/menu-banner-01.jpg';
+    $menu_banner_02_jpg = get_template_directory_uri() . '/assets/images/menu-banner-02.jpg';
+    $logo_black_png = get_template_directory_uri() . '/assets/images/logo-black.png';
+?>
         <!-- start header -->
         <header>
             <nav class="navbar no-sticky navbar-expand-lg navbar-light bg-transparent header-light fixed-top navbar-boxed header-reverse-scroll">
                 <div class="container-fluid nav-header-container">
-                    <div class="col-5 col-lg-2 ps-lg-0 me-auto me-lg-0">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt="" class="default-logo">
-                            <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" alt="" class="alt-logo">
-                            <img src="images/logo-black.png" data-at2x="images/logo-black@2x.png" class="mobile-logo" alt="">
+                    <div class="col-5 col-lg-2 ps-lg-0 me-auto me-lg-0 flex-center">
+                        <a class="navbar-brand" href="<?php echo home_url()?>">
+                            <div class="w-120 h-48" style="background: url(<?php echo esc_url($logo_black_png); ?>) no-repeat center center / contain">
+                            </div>    
                         </a>
                     </div>
                     <div class="col-auto col-lg-8 md-position-initial md-no-padding">
@@ -39,6 +51,21 @@
                             <span class="navbar-toggler-line"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav alt-font">
+                                <li class="nav-item">
+                                    <a href="<?php echo home_url()?>/servicos/" class="nav-link">Agência</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- arquivo do blog -->
+                                    <a href="<?php echo home_url()?>/blog/" class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- <a href="<?php echo home_url()?>/servicos/#projetos" class="nav-link">Projetos</a> -->
+                                    <a href="<?php echo get_post_type_archive_link('projetos'); ?>" class="nav-link">Projetos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <ul class="navbar-nav alt-font">
                                 <li class="nav-item dropdown megamenu">
                                     <a href="#" class="nav-link">Home</a>
@@ -287,24 +314,24 @@
                                             </ul>
                                             <ul class="d-lg-inline-block d-none small-gap">
                                                 <li>
-                                                    <a href="index.html" class="menu-banner-image"><img src="images/menu-banner-01.jpg" alt=""/></a>
+                                                    <a href="index.html" class="menu-banner-image"><img src="<?php echo esc_url($menu_banner_01_jpg); ?>" alt=""/></a>
                                                 </li>
                                             </ul>
                                             <ul class="d-lg-inline-block d-none no-padding-right">
                                                 <li>
-                                                    <a href="index.html" class="menu-banner-image"><img src="images/menu-banner-02.jpg" alt=""/></a>
+                                                    <a href="index.html" class="menu-banner-image"><img src="<?php echo esc_url($menu_banner_02_jpg); ?>" alt=""/></a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-auto col-lg-2 text-end hidden-xs px-lg-0">
                         <div class="header-social-icon d-inline-block">
                             <!-- <a href="http://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram" style="font-size:24px"></i></a>
+                            <a href="https://wa.me/5521998886888?text=Olá,%20vim%20do%20site%20da%20Los%20Anjos%20e%20gostaria%20de%20mais%20informações." target="_blank"><i class="fab fa-whatsapp" style="font-size:24px"></i></a>
                             <!-- <a href="http://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
                         </div>
                     </div>
@@ -312,4 +339,4 @@
             </nav>
         </header>
         <!-- end header -->
-        
+        <div class="main-content">

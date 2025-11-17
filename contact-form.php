@@ -2,7 +2,7 @@
 
     //-----------------------------------------------------
 	//-----------change address to xxx@yourdomainname ----------------------
-	$address= "contatoregenere@ipda.com.br";
+	$address= "adm.losanjos@gmail.com";
 	//-----------------------------------------------------
 	//-----------------------------------------------------
 
@@ -19,7 +19,7 @@
 
 	$message = "--$mime_boundary \r\n";
 	
-	$message .= "Você recebeu um e-mail do site da Regenere: \r\n";
+	$message .= "Você recebeu um e-mail do site Los Anjos: \r\n";
 	$message .= "Nome: $name \r\n";
 	$message .= "Email: $email \r\n";
 	$message .= "Assunto: $subject \r\n";

@@ -1,6 +1,31 @@
   <!-- Comments -->
   <div class="mb-80 mb-xs-40">
-            
+            <style>
+                ul.comment-list{
+                    background: var(--bg);
+                    margin-bottom: 16px;
+                    padding: 16px;
+                    border-radius: 16px;
+                }
+                ul.comment-list .avatar{
+                    border-radius: 100px;
+                }
+                ul.comment-list .comment-author{
+                    position: absolute;
+                    margin-top: -40px;
+                    margin-left: 64px;
+                }
+                ul.comment-list *{
+                    list-style: none;
+                }
+                ul.comment-list ul{
+                    margin-bottom: 16px;
+                    padding: 16px;
+                    border-radius: 0px;
+                    background: var(--surface-alpha);
+                    border:2px solid var(--primary);
+                }
+            </style>
             <?php
                 if(!have_comments()){
                     echo '<h4 class="blog-page-title font-alt">Seja o primeiro a comentar</h4>';
@@ -8,7 +33,7 @@
                     echo '<h4 class="blog-page-title font-alt"><small class="number">'.get_comments_number().'</small> comentários</h4>';
                 }
             ?>
-            <ul class="media-list text comment-list clearlist">
+            <ul class="media-list comment-list clearlist">
                 
             <?php if ( have_comments() ) : ?>
                 <?php
@@ -64,7 +89,7 @@
         <!-- Add Comment -->
         <div class="mb-80 mb-xs-40">
         
-            <h4 class="blog-page-title font-alt"><?php comment_form_title(__('Escreva aqui seu comentário', 'textdomain'), __('Deixe uma resposta para %s', 'textdomain')); ?></h4>
+            <h4 class="blog-page-title font-alt" id="respond"><?php comment_form_title(__('Escreva aqui seu comentário', 'textdomain'), __('Deixe uma resposta para %s', 'textdomain')); ?></h4>
             
             <!-- Form -->
             <form method="post" action="<?php echo esc_url(get_option('siteurl')); ?>/wp-comments-post.php" id="form" role="form" class="form">
@@ -97,7 +122,7 @@
                 </div>
                 
                 <!-- Send Button -->
-                <button name="submit" type="submit" id="submit" class="btn btn-mod btn-medium btn-round btn-round"><?php _e('Enviar', 'textdomain'); ?></button>
+                <button name="submit" type="submit" id="submit" class="btn btn-medium btn-dark-purple d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr"><?php _e('Enviar', 'textdomain'); ?></button>
                 <?php comment_id_fields(); ?>
                 <?php do_action('comment_form', $post->ID); ?>
             </form>

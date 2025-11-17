@@ -1,6 +1,8 @@
 <?php
     get_header();
 ?>
+
+<h1>teste</h1>
     <!-- Head Section -->
     <section class="small-section bg-gray-lighter">
         <div class="relative container align-left">
