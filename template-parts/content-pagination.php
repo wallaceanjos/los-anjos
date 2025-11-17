@@ -1,6 +1,8 @@
 <!-- Pagination -->
 <div class="pagination">
     <?php
+        global $wp_query;
+        
         if ( $wp_query->max_num_pages > 1 ) :
             if ( is_search() ) {
                 $args = array(
@@ -12,8 +14,8 @@
                     'end_size' => 2,
                     'mid_size' => 3,
                     'prev_next' => true,
-                    'prev_text' => '<i class="fa fa-angle-left"></i>',
-                    'next_text' => '<i class="fa fa-angle-right"></i>',
+                    'prev_text' => '<span class="matcha-chevron-left"></span>',
+                    'next_text' => '<span class="matcha-chevron-right"></span>',
                     'type' => 'plain',
                     'add_args' => false,
                     'add_fragment' => ''
@@ -28,8 +30,8 @@
                     'end_size' => 2,
                     'mid_size' => 3,
                     'prev_next' => true,
-                    'prev_text' => '<i class="fa fa-angle-left"></i>',
-                    'next_text' => '<i class="fa fa-angle-right"></i>',
+                    'prev_text' => '<span class="matcha-chevron-left"></span>',
+                    'next_text' => '<span class="matcha-chevron-right"></span>',
                     'type' => 'plain',
                     'add_args' => false,
                     'add_fragment' => ''
