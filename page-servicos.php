@@ -9,6 +9,143 @@
         }
     }
 ?>
+
+<!-- Page Loader (apenas primeira vez) -->
+<div id="page-loader-first-time" class="page-loader-first-time">
+    <div class="loader-spinner"></div>
+</div>
+
+<style>
+/* Loader para primeira carga */
+.page-loader-first-time {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.page-loader-first-time.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.page-loader-first-time.removed {
+    display: none;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(77, 33, 252, 0.1);
+    border-top-color: #4d21fc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
+
+<script>
+(function() {
+    'use strict';
+    
+    // Verifica se já carregou antes
+    var hasLoadedBefore = localStorage.getItem('los-anjos-site-loaded');
+    
+    if (hasLoadedBefore) {
+        // Se já carregou antes, remove o loader imediatamente (se existir)
+        var loader = document.getElementById('page-loader-first-time');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+        return; // Não executa o resto do código
+    }
+    
+    // Se é a primeira vez, mostra o loader e detecta quando carregar
+    var loader = document.getElementById('page-loader-first-time');
+    if (!loader) return;
+    
+    var scriptsLoaded = false;
+    var domReady = false;
+    var maxWaitTime = 4000; // 4 segundos máximo
+    var startTime = Date.now();
+    
+    function checkAndHideLoader() {
+        var elapsed = Date.now() - startTime;
+        
+        // Verifica se tudo carregou ou se passou o tempo máximo
+        if ((scriptsLoaded && domReady) || elapsed > maxWaitTime) {
+            // Adiciona classe para fade out
+            loader.classList.add('hide');
+            
+            // Remove do DOM após animação
+            setTimeout(function() {
+                loader.classList.add('removed');
+                // Salva no localStorage que já carregou
+                localStorage.setItem('los-anjos-site-loaded', 'true');
+            }, 500);
+        }
+    }
+    
+    // Detecta quando DOM está pronto
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            domReady = true;
+            checkAndHideLoader();
+        });
+    } else {
+        domReady = true;
+    }
+    
+    // Detecta quando scripts principais carregaram
+    function checkScriptsLoaded() {
+        // Verifica se jQuery, WOW e outros scripts principais estão disponíveis
+        var scriptsCheck = setInterval(function() {
+            var jqueryLoaded = typeof jQuery !== 'undefined';
+            var wowLoaded = typeof WOW !== 'undefined';
+            var themeVendorsLoaded = typeof Swiper !== 'undefined' || typeof Isotope !== 'undefined'; // Scripts do theme-vendors
+            
+            // Prioriza verificar WOW.js (está no theme-vendors)
+            // Se os scripts principais carregaram (jQuery + theme-vendors que contém WOW)
+            if (jqueryLoaded && (wowLoaded || themeVendorsLoaded || document.readyState === 'complete')) {
+                scriptsLoaded = true;
+                clearInterval(scriptsCheck);
+                checkAndHideLoader();
+            }
+            
+            // Timeout de segurança
+            if (Date.now() - startTime > maxWaitTime) {
+                clearInterval(scriptsCheck);
+                scriptsLoaded = true;
+                checkAndHideLoader();
+            }
+        }, 50); // Verifica mais frequentemente (50ms) para detectar mais rápido
+    }
+    
+    // Inicia verificação de scripts
+    checkScriptsLoaded();
+    
+    // Fallback: quando window.load dispara
+    window.addEventListener('load', function() {
+        scriptsLoaded = true;
+        domReady = true;
+        checkAndHideLoader();
+    });
+    
+})();
+</script>
     
 <!-- Assets -->
 <?php
@@ -29,12 +166,13 @@
     $avatar02 = get_template_directory_uri() . '/assets/images/avatar-02.jpg';
     $avatar03 = get_template_directory_uri() . '/assets/images/avatar-03.jpg';
     
-    $home_design_agency_bg_img_02_png = get_template_directory_uri() . '/assets/images/home-design-agency-bg-img-02.png';
+    $home_design_agency_bg_img_02_jpg = get_template_directory_uri() . '/assets/images/home-design-agency-bg-img-02.jpg';
     $home_design_agency_animated_gif = get_template_directory_uri() . '/assets/images/bgvideosite.gif';
+    
 ?>
 <!-- Assets -->
 
-        <section class="parallax p-0" data-parallax-background-ratio="0.3" style="background:url(<?php echo esc_url($placeholder_video); ?>) no-repeat center center / cover #1E1E3F;">
+        <section class="parallax p-0" data-parallax-background-ratio="0.3" style="background:url(<?php echo esc_url($home_design_agency_bg_img_02_jpg); ?>) no-repeat center center / cover #1E1E3F;">
             <div id="homepage" data-background="<?php echo esc_url($placeholder_img); ?>" style="min-height:100vh;">
                 
                 <div class="with-bg-size" style="position:absolute; top:0px; left:0px; z-index:0; width:100%; height: 100%; margin:auto;">
@@ -42,7 +180,7 @@
                     <div class="container">
                         <div class="row">
                             
-                            <div class="col-12 col-lg-5 col-md-6 col-sm-7 full-screen md-h-650px sm-h-500px d-flex flex-column justify-content-center padding-8-rem-tb visibility-hidden wow animate__fadeInLeft" data-wow-delay="0.1s">
+                            <div class="col-12 col-lg-5 col-md-6 col-sm-7 full-screen md-h-650px sm-h-500px d-flex flex-column justify-content-center padding-8-rem-tb visibility-hidden wow animate__fadeInLeft" data-wow-delay="0.s">
                                 <h1 class="alt-font font-weight-600 title-large text-purple letter-spacing-minus-4px margin-4-half-rem-bottom sm-letter-spacing-minus-1-half xs-w-65 la-card">Los Anjos Agency. Design & Web</h1>
                                 <a href="https://wa.me/5521998886888?text=Olá,%20vim%20do%20site%20da%20Los%20Anjos%20e%20gostaria%20de%20mais%20informações." class="btn btn-extra-large btn-expand-ltr text-purple btn-rounded align-self-start font-weight-600">Fale conosco.<span class="bg-white"></span></a>
                             </div>
@@ -145,10 +283,15 @@
                                         <div class="portfolio-image bg-white">
                                             <?php
                                             if ( has_post_thumbnail() ) {
-                                                the_post_thumbnail( 'full' );
+                                                // Usa tamanho 'large' em vez de 'full' para otimização
+                                                $thumbnail_id = get_post_thumbnail_id();
+                                                $thumbnail_url = wp_get_attachment_image_url( $thumbnail_id, 'large' );
+                                                $thumbnail_srcset = wp_get_attachment_image_srcset( $thumbnail_id, 'large' );
+                                                $thumbnail_alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ) ?: get_the_title();
+                                                echo '<img src="' . esc_url( $thumbnail_url ) . '" srcset="' . esc_attr( $thumbnail_srcset ) . '" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="' . esc_attr( $thumbnail_alt ) . '" loading="lazy" decoding="async">';
                                             } else {
                                                 // Caso não tenha imagem destacada, exiba uma imagem padrão
-                                                echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/images/default.jpg' ) . '" alt="' . get_the_title() . '">';
+                                                echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/images/default.jpg' ) . '" alt="' . esc_attr( get_the_title() ) . '" loading="lazy" decoding="async">';
                                             }
                                             ?>
                                             <div class="portfolio-hover bg-white justify-content-center d-flex flex-column">
@@ -191,7 +334,7 @@
                 <div class="d-none d-sm-grid grid-md-5 grid-sm-3 gap-8">
                     <!-- start feature box item -->
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.1s">
-                        <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
+                        <a href="javascript:void(0)" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Vector-5 icon-large padding-20px-bottom"></i>
                             <span class="alt-font font-weight-600 text-purple text-uppercase d-block">Bom Design</span>
                         </a>
@@ -199,7 +342,7 @@
                     <!-- end feature box item -->
                     <!-- start feature box item -->
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
-                        <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
+                        <a href="javascript:void(0)" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Police icon-large padding-20px-bottom"></i>
                             <span class="alt-font font-weight-600 text-purple text-uppercase d-block">Ideias Inspiradoras</span>
                         </a>
@@ -207,7 +350,7 @@
                     <!-- end feature box item -->
                     <!-- start feature box item -->
                     <div class="col text-center md-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.3s">
-                        <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
+                        <a href="javascript:void(0)" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Bee icon-large padding-20px-bottom"></i>
                             <span class="alt-font font-weight-600 text-purple text-uppercase d-block">Inovação</span>
                         </a>
@@ -215,7 +358,7 @@
                     <!-- end feature box item -->
                     <!-- start feature box item -->
                     <div class="col text-center sm-margin-50px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
-                        <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
+                        <a href="javascript:void(0)" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Medal-2 icon-large padding-20px-bottom"></i>
                             <span class="alt-font font-weight-600 text-purple text-uppercase d-block">Melhor Qualidade</span>
                         </a>
@@ -223,7 +366,7 @@
                     <!-- end feature box item -->
                     <!-- start feature box item -->
                     <div class="col text-center wow animate__fadeIn" data-wow-delay="0.5s">
-                        <a href="#" class="text-medium-gray text-sunglow-hover cursor-default">
+                        <a href="javascript:void(0)" class="text-medium-gray text-sunglow-hover cursor-default">
                             <i class="line-icon-Idea-5 icon-large padding-20px-bottom"></i>
                             <span class="alt-font font-weight-600 text-purple text-uppercase d-block">Análise de Branding</span>
                         </a>
@@ -239,14 +382,14 @@
                     </div>
                     <div class="col-12 col-lg-4 col-md-9 padding-30px-left md-padding-15px-left text-center text-lg-start wow animate__fadeIn" data-wow-delay="0.4s">
                         <p class="w-80-p margin-15px-bottom lg-w-100">Somos os mestres na arte da criação! Vamos transformar suas ideias em obras-primas visuais.</p>
-                        <a href="about-us.html" class="btn btn-link btn-extra-large text-purple font-weight-600">Agency info</a>
+                        <a href="#services" class="btn btn-link btn-extra-large text-purple font-weight-600">Agency info</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- start section -->
-        <section class="bg-gradient-white-light-gray">
+        <section id="services" class="bg-gradient-white-light-gray">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-12 col-lg-6 position-relative text-center md-margin-30px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
@@ -271,7 +414,7 @@
                     </div>
                     <div class="col-12 col-xl-4 col-lg-5 offset-lg-1 col-md-7">
                         <h4 class="alt-font font-weight-600 text-purple margin-4-half-rem-bottom letter-spacing-minus-1px text-center text-lg-start wow animate__fadeInRight" data-wow-delay="0.2s">
-                            Descubra serviços incríveis de web e design!
+                            Vamos transformar suas ideias em realidade?
                         </h4>
                         <!-- start feature box item -->
                         <div class="feature-box feature-box-left-icon-middle margin-4-half-rem-bottom wow animate__fadeInRight" data-wow-delay="0.3s">
@@ -280,8 +423,8 @@
                                 <div class="feature-box-icon-hover bg-dark-purple rounded-circle"></div>
                             </div>
                             <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Opções poderosas</span>
-                                <p>Desfrute de inúmeras alternativas para personalizar sua marca com soluções inovadoras e criativas.</p>
+                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Criativos para redes sociais</span>
+                                <p>Seu feed vai bombar! Criamos posts que engajam, stories que convertem e conteúdo que faz sua marca brilhar nas redes.</p>
                             </div>
                         </div>
                         <!-- end feature box item -->
@@ -292,8 +435,8 @@
                                 <div class="feature-box-icon-hover bg-dark-purple rounded-circle"></div>
                             </div>
                             <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Variações ilimitadas</span>
-                                <p>Descubra combinações exclusivas que se adaptam perfeitamente às necessidades do seu negócio.</p>
+                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Identidade visual</span>
+                                <p>Damos vida à sua marca com uma identidade única e memorável. Logo, cores, tipografia - tudo pensado para você se destacar!</p>
                             </div>
                         </div>
                         <!-- end feature box item -->
@@ -304,8 +447,8 @@
                                 <div class="feature-box-icon-hover bg-dark-purple rounded-circle"></div>
                             </div>
                             <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Estratégia eficaz</span>
-                                <p>Uma abordagem inteligente que une criatividade e planejamento para resultados impactantes.</p>
+                                <span class="alt-font font-weight-500 margin-5px-bottom d-block text-purple">Websites que convertem</span>
+                                <p>Construímos sites lindos, rápidos e que realmente funcionam. Do conceito à publicação, cuidamos de cada detalhe com você.</p>
                             </div>
                         </div>
                         <!-- end feature box item -->
@@ -390,7 +533,7 @@
                                                 A partir de
                                         </div>
                                         <div class="margin-30px-bottom">
-                                            <h4 class="alt-font font-weight-600 text-slate-blue mb-0 letter-spacing-minus-2px">R$2.985</h4>
+                                            <h4 class="alt-font font-weight-600 text-slate-blue mb-0 letter-spacing-minus-2px">R$3.000</h4>
                                         </div>
                                         <ul class="list-style-03">
                                             <li class="border-0 p-0 margin-10px-bottom">Site responsivo</li>
@@ -520,7 +663,7 @@
                         </h4>
                     </div>
                     <div class="col-12 col-lg-3 text-center wow animate__fadeIn" data-wow-delay="0.4s">
-                        <a href="contact-us-modern.html" class="btn btn-fancy btn-box-shadow btn-medium btn-dark-gray">Bora começar!</a>
+                        <a href="https://wa.me/5521998886888?text=Olá,%20vim%20do%20site%20da%20Los%20Anjos%20e%20gostaria%20de%20mais%20informações." class="btn btn-fancy btn-box-shadow btn-medium btn-dark-gray">Bora começar!</a>
                     </div>
                 </div>
             </div>

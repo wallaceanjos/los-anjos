@@ -156,9 +156,6 @@
 
     <!-- Text -->
     <div class="flex-column flex-align-center px-16">
-        <h4 class="text-center">
-            <?php the_title(); ?>
-        </h4>
         <?php the_content(); ?>
     </div>
     <!-- End Text -->

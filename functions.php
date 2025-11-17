@@ -189,9 +189,15 @@ function theme_custom_templates() {
 
 function los_anjos_register_styles(){
     $version = wp_get_theme() -> get('Version');
+    
+    // 1. Theme vendors primeiro (contém Animate.css/WOW styles) - prioridade alta
     wp_enqueue_style('los-anjos-style-theme-vendors', get_template_directory_uri() . "/assets/css/theme-vendors.min.css", array(), $version, 'all');
-    wp_enqueue_style('los-anjos-style', get_template_directory_uri() . "/assets/css/style.css", array(), $version, 'all');
-    wp_enqueue_style('los-anjos-style-responsive', get_template_directory_uri() . "/assets/css/responsive.css", array(), $version, 'all');
+    
+    // 2. Estilos principais - dependem do theme-vendors
+    wp_enqueue_style('los-anjos-style', get_template_directory_uri() . "/assets/css/style.css", array('los-anjos-style-theme-vendors'), $version, 'all');
+    
+    // 3. Outros estilos - dependem do style principal
+    wp_enqueue_style('los-anjos-style-responsive', get_template_directory_uri() . "/assets/css/responsive.css", array('los-anjos-style'), $version, 'all');
     wp_enqueue_style('los-anjos-style-font-awesome', get_template_directory_uri() . "/assets/css/font-icons.min.css", array(), $version, 'all');
     wp_enqueue_style('los-anjos-style-icons', get_template_directory_uri() . "/assets/css/icons.css", array(), $version, 'all');
     wp_enqueue_style('los-anjos-style-forms', get_template_directory_uri() . "/assets/css/forms.css", array(), $version, 'all');
@@ -199,16 +205,23 @@ function los_anjos_register_styles(){
     wp_enqueue_style('los-anjos-style-layout', get_template_directory_uri() . "/assets/css/layout.css", array(), $version, 'all');
     wp_enqueue_style('los-anjos-style-YTPlayer', get_template_directory_uri() . "/assets/css/YTPlayer.css", array(), $version, 'all');
 }
-add_action('wp_enqueue_scripts', 'los_anjos_register_styles');
+add_action('wp_enqueue_scripts', 'los_anjos_register_styles', 5); // Prioridade 5 para carregar mais cedo
 
 function los_anjos_register_scripts(){
     $version = wp_get_theme() -> get('Version');
-    wp_enqueue_script('los-anjos-script-jquery', get_template_directory_uri() . "/assets/js/jquery.min.js", array(),'1.11.2', 'all');
-    wp_enqueue_script('los-anjos-script-theme-vendors', get_template_directory_uri() . "/assets/js/theme-vendors.min.js", array(),'1.11.2', 'all');
-    wp_enqueue_script('los-anjos-script-main.js', get_template_directory_uri() . "/assets/js/main.js", array(), '1.3', 'all');
-    // wp_enqueue_script('los-anjos-script-loader.js', get_template_directory_uri() . "/assets/js/loader.js", array(), '1.3', 'all');
-    wp_enqueue_script('los-anjos-script-YTPlayer', get_template_directory_uri() . "/assets/js/jquery.mb.YTPlayer.js", array(), '1.3', 'all');
+    
+    // 1. jQuery primeiro (sem dependências, prioridade alta)
+    wp_enqueue_script('los-anjos-script-jquery', get_template_directory_uri() . "/assets/js/jquery.min.js", array(), '1.11.2', false);
+    
+    // 2. Theme vendors (contém WOW.js) - depende do jQuery, prioridade alta
+    wp_enqueue_script('los-anjos-script-theme-vendors', get_template_directory_uri() . "/assets/js/theme-vendors.min.js", array('los-anjos-script-jquery'), $version, false);
+    
+    // 3. Main.js - depende do jQuery e theme-vendors (que contém WOW), prioridade normal
+    wp_enqueue_script('los-anjos-script-main.js', get_template_directory_uri() . "/assets/js/main.js", array('los-anjos-script-jquery', 'los-anjos-script-theme-vendors'), $version, true);
+    
+    // 4. YTPlayer - depende do jQuery, carrega no footer
+    wp_enqueue_script('los-anjos-script-YTPlayer', get_template_directory_uri() . "/assets/js/jquery.mb.YTPlayer.js", array('los-anjos-script-jquery'), $version, true);
 }
-add_action('wp_enqueue_scripts', 'los_anjos_register_scripts');
+add_action('wp_enqueue_scripts', 'los_anjos_register_scripts', 5); // Prioridade 5 para carregar mais cedo
 
 ?>
